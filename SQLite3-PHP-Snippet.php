@@ -40,7 +40,7 @@
 	$lastid = $db->lastInsertRowid();
 	
 	// update
-	$db2->query('UPDATE "users" SET
+	$db->query('UPDATE "users" SET
 		"email" = "admin@admin.com"
 	WHERE 
 		"id" = "' . $lastid . '"
