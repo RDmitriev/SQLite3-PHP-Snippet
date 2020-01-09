@@ -39,6 +39,13 @@
 	// last insert id
 	$lastid = $db->lastInsertRowid();
 	
+	// update
+	$db2->query('UPDATE "users" SET
+		"email" = "admin@admin.com"
+	WHERE 
+		"id" = "' . $lastid . '"
+	');
+	
 	// select single
 	$result = $db->querySingle('SELECT *
 		FROM "users"
